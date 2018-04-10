@@ -70,3 +70,10 @@ exports['checkout gives the best offer when two offers conflict'] = function (te
     test.equal(checkout("ABCDEABCDE"), 280); // 2E = 1B Free
     test.done();
 }
+
+exports['checkout gives free F when three are purchased'] = function (test) {
+    test.equal(checkout("FFF"), 20);
+    test.equal(checkout("FFFFF"), 40);
+    test.equal(checkout("FFFFFF"), 40);
+    test.done();
+}
