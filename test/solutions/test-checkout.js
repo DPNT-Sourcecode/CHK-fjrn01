@@ -16,6 +16,7 @@ exports['checkout single items with correct price'] = function (test) {
     test.equal(checkout("B"), 30);
     test.equal(checkout("C"), 20);
     test.equal(checkout("D"), 15);
+    test.equal(checkout(""), 0);
     test.done();
 };
 
