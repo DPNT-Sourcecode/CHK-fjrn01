@@ -98,5 +98,10 @@ exports['checkout gives free F when three are purchased'] = function (test) {
 }
 
 exports['checkout allows a group to be purchased at a fixed price'] = function (test) {
-
+    test.equal(checkout("STX"), 45);
+    test.equal(checkout("STXYZ"), 82);
+    test.equal(checkout("ZZZZZZ"), 90);
+    test.equal(checkout("XZZZ"), 62);
+    test.equal(checkout("XSYSTZ"), 90);
+    test.done();
 }
