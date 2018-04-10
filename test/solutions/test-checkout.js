@@ -54,3 +54,8 @@ exports['checkout applies more than one multi-buy in a single transaction'] = fu
     test.equal(checkout("DDBB"), 75);
     test.done();
 }
+
+exports['checkout gives B when purchasing 2E'] = function (test) {
+    test.equal(checkout("EEB"), 80);
+    test.done();
+}
