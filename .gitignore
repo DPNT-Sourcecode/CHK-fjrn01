@@ -1,0 +1,6 @@
+.idea
+node_modules
+challenges/*.txt
+record/localstore
+config/credentials.config
+.DS_Store
