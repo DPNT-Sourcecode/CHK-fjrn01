@@ -25,7 +25,6 @@ exports['checkout single items with correct price'] = function (test) {
 };
 
 exports['checkout invalid item gives price of -1'] = function (test) {
-    test.equal(checkout("Z"), -1);
     test.equal(checkout("56"), -1);
     test.equal(checkout(undefined), -1);
     test.equal(checkout(null), -1);
