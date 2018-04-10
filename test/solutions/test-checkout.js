@@ -20,7 +20,6 @@ exports['checkout single items with correct price'] = function (test) {
 };
 
 exports['checkout invalid item gives price of -1'] = function (test) {
-    test.equal(checkout("ABC"), -1);
     test.equal(checkout("Z"), -1);
     test.equal(checkout("56"), -1);
     test.equal(checkout(undefined), -1);
@@ -29,3 +28,11 @@ exports['checkout invalid item gives price of -1'] = function (test) {
     test.equal(checkout(10), -1);
     test.done();
 };
+
+exports['checkout mulitple items gives total'] = function (test) {
+    test.equal(checkout("ABCD"), 115);
+    test.equal(checkout("AA"), 100);
+    test.equal(checkout("DDDD"), 60);
+    test.equal(checkout("CCDD"), 70);
+    test.done();
+}
