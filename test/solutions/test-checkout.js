@@ -1,14 +1,15 @@
 var checkout = require('../../lib/solutions/checkout');
 
 /*
-+------+-------+----------------+
-| Item | Price | Special offers |
-+------+-------+----------------+
-| A    | 50    | 3A for 130     |
-| B    | 30    | 2B for 45      |
-| C    | 20    |                |
-| D    | 15    |                |
-+------+-------+----------------+
++------+-------+------------------------+
+| Item | Price | Special offers         |
++------+-------+------------------------+
+| A    | 50    | 3A for 130, 5A for 200 |
+| B    | 30    | 2B for 45              |
+| C    | 20    |                        |
+| D    | 15    |                        |
+| E    | 40    | 2E get one B free      |
++------+-------+------------------------+
 */
 
 exports['checkout single items with correct price'] = function (test) {
@@ -16,6 +17,7 @@ exports['checkout single items with correct price'] = function (test) {
     test.equal(checkout("B"), 30);
     test.equal(checkout("C"), 20);
     test.equal(checkout("D"), 15);
+    test.equal(checkout("E"), 40);
     test.equal(checkout(""), 0);
     test.done();
 };
