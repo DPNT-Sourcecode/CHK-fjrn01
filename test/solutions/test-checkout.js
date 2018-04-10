@@ -47,7 +47,6 @@ exports['checkout correctly applies multi-buy discounts'] = function (test) {
 }
 
 exports['checkout applies more than one multi-buy in a single transaction'] = function (test) {
-    test.equal(checkout("AAAAAA"), 260);
     test.equal(checkout("BBBB"), 90);
     test.equal(checkout("AAABB"), 175);
     test.equal(checkout("AAAC"), 150);
