@@ -57,6 +57,7 @@ exports['checkout applies more than one multi-buy in a single transaction'] = fu
 exports['checkout gives B when purchasing 2E'] = function (test) {
     test.equal(checkout("EEB"), 80);
     test.equal(checkout("EEEEBB"), 160);
+    test.equal(checkout("BEBEEE"), 160);
     test.done();
 }
 
@@ -64,5 +65,6 @@ exports['checkout gives the best offer when two offers conflict'] = function (te
     test.equal(checkout("AAAAA"), 200); // 5A for 200
     test.equal(checkout("AAAAAA"), 250); // 5A for 200 and 1A for 50
     test.equal(checkout("AAAAAAAAA"), 380); // 5A for 200 3A for 130 and 1A for 50
+    test.equal(checkout("ABCDEABCDE"), 280); // 2E = 1B Free
     test.done();
 }
