@@ -9,6 +9,7 @@ var checkout = require('../../lib/solutions/checkout');
 | C    | 20    |                        |
 | D    | 15    |                        |
 | E    | 40    | 2E get one B free      |
+| F    | 10    | 2F get one F free      |
 +------+-------+------------------------+
 */
 
@@ -18,6 +19,7 @@ exports['checkout single items with correct price'] = function (test) {
     test.equal(checkout("C"), 20);
     test.equal(checkout("D"), 15);
     test.equal(checkout("E"), 40);
+    test.equal(checkout("F"), 10);
     test.equal(checkout(""), 0);
     test.done();
 };
