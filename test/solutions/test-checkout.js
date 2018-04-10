@@ -96,3 +96,7 @@ exports['checkout gives free F when three are purchased'] = function (test) {
     test.equal(checkout("FFFFFF"), 40);
     test.done();
 }
+
+exports['checkout allows a group to be purchased at a fixed price'] = function (test) {
+
+}
