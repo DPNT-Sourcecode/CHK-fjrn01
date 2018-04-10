@@ -36,3 +36,9 @@ exports['checkout mulitple items gives total'] = function (test) {
     test.equal(checkout("CCDD"), 70);
     test.done();
 }
+
+exports['checkout correctly applies multi-buy discounts'] = function (test) {
+    test.equal(checkout("AAA"), 130);
+    test.equal(checkout("BB"), 45);
+    test.done();
+}
