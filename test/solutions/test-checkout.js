@@ -59,3 +59,11 @@ exports['checkout gives B when purchasing 2E'] = function (test) {
     test.equal(checkout("EEB"), 80);
     test.done();
 }
+
+// 3A for 130, 5A for 200
+// 6A = 260 6A = 250
+exports['checkout gives the best offer when two offers conflict'] = function (test) {
+    test.equal(checkout("AAAAA"), 200);
+    test.equal(checkout("AAAAAA"), 250);
+    test.done();
+}
